@@ -1,0 +1,152 @@
+---
+title: "Final Examination"
+runtime: shiny
+output: html_document
+---
+
+# Fall 2017 TRGN510 Final Exam
+
+This is the final exam markdown for TRGN510. You may not consult other students.  You are expected to use the internet.  You should double check your work. It is due Thursday December 14th @ 1PM.
+
+  Please edit the markdown such by either (1) striking *italicized* words that are incorrect using ~~strikethrough~~ (\~\~strikethrough\~\~), (2) deleting the incorrect *italicized* terms, or (3) putting the correct answer where requested.
+
+See below for an example.  We see that both _true_ and _false_ are options.  To answer the question, we delete _false_
+
+### Example
+
+**Before the exam**
+
+* It is __true__ __false__ that the earth is round and the average temperature of the earth has risen within our lifetime
+
+**After you edited by deleting __false__ or crossing it out, any one of these is ok **
+
+* It is __true__ that the earth is round and the average temperature of the earth has risen within our lifetime
+* It is __true__ ~~_false_~~ that the earth is round and the average temperature of the earth has risen within our lifetime
+
+***
+
+## Exam
+
+### Question 1: "5" is a __String__ datatype.
+
+### Question 2:. 5 is a __Float__ datatype.
+
+### Question 3: "" is an __String__ datatype.
+
+### Question 4: 2.0 is an __Float__  datatype.
+
+### Question 5: "true" is an __String__ datatype.
+
+### Question 6: TRUE is an __Boolean__ datatype.
+
+### Question 7: When we run the command *j<-c("d",1,"b")* in *R*, creates a __array__ stored in *a*.
+type
+### Question 8: Please load in the iris dataset from the ggplot2 library into a variable with the name "mydata" below, this should be done within an R codeblock.
+
+```{r}
+mydata<-(iris)
+```
+
+### Question 9. What type of data is found within mydata$Species, from the above question 8?
+
+```{r}
+class(mydata$Species)
+```
+
+### Question 10. Create a codeblock to find the median of Sepal.Width
+
+>  
+```{r}
+median(mydata$Sepal.Width)
+```
+
+### Question 11. Create a R codeblock to create a violin plot of Sepal.Width from the factors in Species using ggplot2
+
+>  __Your Answer Here__
+```{r}
+library(ggplot2)
+p <- ggplot(mydata, aes(x=mydata$Species, y=mydata$Sepal.Width)) + 
+  geom_violin()
+  print(p)
+```
+
+
+### Question 12. Within a codeblock and using between 140 and 740 characters, describe the differences between GPLV3 and MIT Licenses, and store that as a String in tthe variable "myanswer"
+
+> 
+```{r}
+myanswer <- "(The MIT license is considered to be more permissive meaning that there isn't a lot that the developer has to do besides cite the MIT licnese. The GPLV3 license on the other hand is more restrictive which means the devoloper has to make any changes he makes to the code be open sourced. If you want to make it difficult for people to use your code then you can use the GPLV3 license whereas if you only want your name to be included, you can use the MIT license. GPLV3 is a copyleft license which reqiures more conditions be met than the MIT license such as disclosure of source, license and copyright notice and same license (file), whereas MIT licnese conditons only requre a license and copyright notice. Both MIT License and GPLV3 permit commercial use, distribution modification and private use, howerver GPLV3 also permits patent use and MIT license does not. In terms of limitations, both licenses have liability and warranty)"
+```
+
+
+
+### Question 13. Write an R code block that provides the number of characters in "myanswer".
+
+>  
+```{r}
+nchar(myanswer)
+```
+
+### Question 14. Write an R codeblock that replaces "MIT" with "Massachusetts Institute of Technology" and "GPU" with "General Public License" within "myanswer"
+
+>  
+```{r}
+gsub("MIT", "Massachusetts Institute of Technology", gsub("GPLV3", "General Public License", myanswer))
+```
+
+### Question 15. The data below is typically __json__
+
+> data ={
+        name: "John",
+        address: {
+            street: "459 E Jon St.",
+            city: "Springfield,
+            state: "Illinois",
+        },
+        age:14
+    }
+    
+### Question 16. In the example above, data.address is an __ordered__  embedded document (or list)
+
+* In a bash code block, write a 1 line command that counts number hidden files in your home directory (hidden means starts with a .). The example should use a pipe, ls, and wc
+
+> 
+```{bash}
+ls ~/.* | wc -l 
+```
+
+### Question 17. What is the first line of a BASH script?
+
+> 
+```{bash}
+ #!/usr/bin/bash
+```
+### Question 18. Please create a github repository 'YourNameFinalExam', replacing with your name and using camelcase.  Please put your completed exam in it, and share this exam with me.
+
+> Your answer will appear as an email request to me collaborate!
+
+***
+
+
+<!-- The text below is just to reformat the page, using css styling -->
+```{r results="asis", echo = FALSE}
+cat("
+<style>
+h1 {
+    background-color: #990000;
+    color:#FFF;
+    text-align:center;
+}
+h2 {
+   background-color:#f3d6d6;
+   text-align:center;
+   color:#333
+}
+h3 {
+   margin-left:-5px;
+   color:#333
+}
+
+</style>
+")
+```
