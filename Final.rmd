@@ -44,6 +44,7 @@ type
 ### Question 8: Please load in the iris dataset from the ggplot2 library into a variable with the name "mydata" below, this should be done within an R codeblock.
 
 ```{r}
+library(ggplot2)
 mydata<-(iris)
 ```
 
